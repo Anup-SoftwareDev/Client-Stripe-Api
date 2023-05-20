@@ -13,7 +13,7 @@ const port = process.env.PORT||5001
 
 app.listen(port, error=>{
     if(error)throw error;
-    //console.log('Your server is running on port 5001');
+    console.log('Your server is running on port 5001');
 })
 
 app.post('/payment', async(req,res)=>{
@@ -28,8 +28,8 @@ app.post('/payment', async(req,res)=>{
         status = "success"
 
     }catch(error){
-        console.log(error)
+        //console.log(error)
         status = 'Failure'
     }
-    res.json({error, status})
+    res.json({error, status, someResult: 'some data'})
 })
