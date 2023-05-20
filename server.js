@@ -31,5 +31,5 @@ app.post('/payment', async(req,res)=>{
         //console.log(error)
         status = 'Failure'
     }
-    res.json({error, status, someResult: 'some data'})
+    res.json({error, status})
 })
